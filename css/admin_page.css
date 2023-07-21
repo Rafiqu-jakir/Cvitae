@@ -1,0 +1,65 @@
+.admin_page_content_wraper{
+    height: 400px;
+    margin-top: -50px;
+}
+.header{
+    background-color: none;
+    color: #fff !important;
+}
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 620px !important;
+    margin-top: 10px;
+    margin-left: 0px !important;
+
+  }
+
+  #customers td,
+  #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color:#000;
+  }
+
+  #customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  #customers tr:nth-child(odd) {
+    background-color: #e7e0e0;
+  }
+
+  #customers tr:hover {
+    background-color: #ddd;
+    transition: 0.5s;
+  }
+
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04aa6d;
+    color: white;
+    text-align: center;
+  }
+  .delete_btn a{
+    background-color: rgb(199, 30, 30);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  .delete_btn a:hover{
+    background-color: rgb(168, 21, 21);
+  }
+  .approve_btn a{
+    background-color: #04AA6D;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  .approve_btn a:hover{
+    background: #038153;
+  }

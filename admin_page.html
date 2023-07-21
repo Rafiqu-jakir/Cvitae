@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cvitae - Find you professional</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .tab {
+        float: left;
+        width: 20%;
+        height: 300px;
+        margin-top: -35px;
+      }
+
+      /* Style the buttons inside the tab */
+      .tab button {
+        display: block;
+        background-color: #721397;
+        color: rgb(255, 255, 255);
+        padding: 5px 10px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 20px;
+        border: 1px solid #fff;
+        border-radius: 15px 0px 15px 0px;
+        margin-top: 7px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        border: 1px solid #fff;
+        box-shadow: 1px 1px 1px rgb(255, 255, 255),
+          1px -1px 1px rgb(255, 255, 255), -1px 1px 1px rgb(255, 255, 255),
+          -1px -1px 1px rgb(255, 255, 255);
+      }
+
+      /* Create an active/current "tab button" class */
+      .tab button.active {
+        background-color: #fff;
+        color: #721397;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        float: left;
+        padding: 0px 12px;
+        /* border: 1px solid #ccc;*/
+        width: 80%;
+        border-left: none;
+        height: auto;
+      }
+      .post_wraper input[type=text]{
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.219);
+    width: 370px;
+    border: 1px solid #721397;
+  }
+  .post_wraper input[type=text]:focus{
+    border: 1px solid #fff;
+  }
+  .post_wraper textarea{
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.219);
+    border: 1px solid #721397;
+    padding: 15px;
+    color: #fff;
+  }
+  .post_wraper textarea:focus{
+    border: 1px solid #fff !important;
+  }
+  .post_wraper input[type=submit]{
+    width: 120px;
+    padding: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    float: left;
+    transition: 0.3s;
+  }
+  .post_wraper input[type=submit]:hover{
+    background-color: #fff;
+    color: #000;
+  }
+  .decription_fix_width{
+  max-width: 200px !important;
+  max-height: 200px;
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+}
+.title_fix_width{
+  max-width: 200px !important;
+  max-height: 100px;
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+}
+.pkg_wraper{
+  width: 420px;
+  padding: 20px;
+  margin-top: 20px;
+  float: left;
+  margin-left: 30px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  
+}
+.pkg_wraper  label{
+  display: block;
+  float: left;
+  margin-bottom: 0px;
+  color: #fff;
+}
+.pkg_title{
+  margin-top: -22px;
+  width: 418px;
+  padding-left: 21px;
+  margin-left: -20px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.profile_wraper{
+  text-align: left;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.profile_wraper p {
+  color:#fff;
+
+}
+.profile_wraper p span{
+  color: rgb(211, 205, 205);
+
+}
+.popup_button {
+        display: block;
+        float: left;
+        width: 540px;
+        margin-top: 10%;
+        margin-left: 30px;
+        position: relative;
+
+      }
+      .popup_button a {
+        padding: 10px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #04aa6d;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px rgb(201, 197, 197);
+        position: absolute;
+      }
+      .popup_button a:hover {
+        background-color: #3e8e41;
+      }
+      .popup_button a:active {
+        background-color: #3e8e41;
+        box-shadow: 0 0px rgb(201, 197, 197);
+        transform: translateY(4px);
+      }
+      .Logout {
+        margin-left: 155px;
+        background-color: red !important;
+      }
+      .update_section{
+        width: 350px;
+        float: right !important;
+        padding: 20px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        position: absolute;
+        margin-left: 350px;
+        margin-top: -170px;
+        text-align: center;
+        box-shadow: 2px 2px 7px #fff,-2px 2px 7px #fff,2px -2px 7px #fff,-2px -2px 7px #fff;
+        display: none;
+      }
+      .update_section input[type=submit]{
+        padding: 0px;
+        padding: 10px 20px;
+        background-color: #04aa6d;
+        transition: 0.3s;
+        width: 120px;
+        border-radius: 7px;
+        margin: auto;
+      }
+      .update_section input[type=submit]:hover{
+        background-color: #3e8e41;;
+      }
+    </style>
+    <link rel="stylesheet" href="css/admin_page.css" />
+  </head>
+
+  <body>
+    <?php
+    $con = new mysqli("localhost","root","","cvitae");
+    $myfile = fopen("textfile/admin_email.txt", "r") or die("Unable to open file!");
+    $user_email = fgets($myfile);
+    if($user_email == NULL){
+      header( 'Location: http://localhost/CVitae/404.html');
+    }
+    ?>
+    <div class="container-xxl bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-grow text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar & Hero Start -->
+      <div class="container-xxl position-relative p-0">
+        <nav
+          class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+        >
+          <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0"><i class="fa fa-mail-bulk me-2"></i>CVitae</h1>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-exist-auto py-0">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="#" class="nav-item nav-link">Service</a>
+              <a href="post_page.html" class="nav-item nav-link">Post</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-xxl py-5 bg-primary email-exist-header mb-5">
+          <div class="container my-5 email-exist-pt px-lg-5">
+            <div class="row g-5 py-5">
+              <div class="col-12 text-center">
+                <div class="admin_page_content_wraper">
+                  <div class="header">
+                    <h1 style="color: #fff">Welcome to Admin Panel !</h1>
+                  </div>
+
+                  <div class="tab">
+                    <button
+                      class="tablinks active"
+                      onclick="openCity(event, 'all_users')"
+                      id="defaultOpen"
+                    >
+                      All Users
+                    </button>
+                    <button
+                      class="tablinks"
+                      onclick="openCity(event, 'create_post')"
+                    >
+                      Create Post
+                    </button>
+                    <button
+                    class="tablinks"
+                    onclick="openCity(event, 'all_post')"
+                  >
+                    All Post
+                  </button>
+                  <button
+                  class="tablinks"
+                  onclick="openCity(event, 'package')"
+                >
+                Package
+                </button>
+                  <button
+                  class="tablinks"
+                  onclick="openCity(event, 'account_appruval')"
+                >
+                  Account Approval
+                </button>
+                    <button
+                      class="tablinks"
+                      onclick="openCity(event, 'my_profile')"
+                    >
+                      My Account
+                    </button>
+                  </div>
+                  <!-- #######################Admin Wraper####################################### -->
+                  <?php
+                  $con = new mysqli("localhost","root","","cvitae");
+                  $all_users_query = "SELECT * FROM `user_registration` ORDER BY ID ASC";
+                  $all_users_data = mysqli_query($con,$all_users_query);
+                  ?>
+                  <!-- -----All Users Section Start------------- -->
+                  <div id="all_users" class="tabcontent">
+                    <div class="container">
+                      <div class="row col-md-6 col-md-offset-3">
+                        <div class="panel panel-primary">
+                          <div class="panel-body">
+                            <table id="customers">
+                              <tr>
+                                <th>Users ID</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Profession</th>
+                                <th>Status</th>
+                              </tr>
+                              <?php
+                    while($all_users_row = mysqli_fetch_array($all_users_data)){ ?>
+                              <tr>
+                                <td>
+                                  <?php echo $all_users_row['ID']; ?>
+                                </td>
+                                <td>
+                                  <?php echo $all_users_row['Full Name']; ?>
+                                </td>
+                                <td>
+                                  <?php echo $all_users_row['Email']; ?>
+                                </td>
+                                <td>
+                                  <?php echo $all_users_row['profession']; ?>
+                                </td>
+                                <td  class="delete_btn">
+                                    <?php echo "
+                                    <a href='php/user_delete.php?user_id=$all_users_row[ID]'>Delete</a>"
+                                    ?>
+                                  </td>
+                              </tr>
+
+                              <?php } ?>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- --------------All Users Section Close---------------------------------- -->
+
+
+                  <!-- ------------Create Post Section Start----------------------------------- -->
+
+                  <div id="create_post" class="tabcontent">
+                    <div class="container">
+                      <div class="row col-md-6 col-md-offset-3">
+                        <div class="panel panel-primary">
+                          <div class="panel-body">
+                            <div class="post_wraper">
+                              <form action="php/post.php">
+                                <input type="text" required name="title" placeholder="Write a Greate Title">
+                                <textarea name="description" required id="" cols="50" rows="10" placeholder="Descrive you Topic!"></textarea>
+                                <input type="submit" value="Post">
+                              </form>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- -----------------------Create Post Section Close------------------------------- -->
+
+
+                  <?php
+                  $con = new mysqli("localhost","root","","cvitae");
+                  $myfile = fopen("textfile/admin_email.txt", "r") or die("Unable to open file!");
+                  $admin_email = fgets($myfile);
+                  $post_query = "SELECT * FROM `post` WHERE email = '$admin_email'";
+                  $post_data = mysqli_query($con,$post_query);
+                  ?>
+                  <!-- -----------------------All Post Section Start------------- -->
+                  <div id="all_post" class="tabcontent">
+                    <div class="container">
+                      <div class="row col-md-6 col-md-offset-3">
+                        <div class="panel panel-primary">
+                          <div class="panel-body">
+                            <table id="customers">
+                              <tr>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                              </tr>
+                              <?php
+                    while($post_row = mysqli_fetch_array($post_data)){ ?>
+                              <tr>
+                                <td>
+                                  <?php echo $post_row['Date']; ?>
+                                </td>
+                                <td  class="title_fix_width">
+                                  <?php echo $post_row['Title']; ?>
+                                </td>
+                                <td class="decription_fix_width">
+                                  <?php echo $post_row['Description']; ?>
+                                </td>
+                                <td  class="delete_btn">
+                                    <?php echo "
+                                    <a  href='php/admin_post_delete.php?title=$post_row[Title]'>Delete</a>"
+                                    ?>
+                                  </td>
+
+                              </tr>
+
+                              <?php } ?>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- --------------All Post Section Close---------------------------------- -->
+
+
+
+                  <?php
+                  $silver_query = "SELECT * FROM `pricing_table` WHERE package_name = 'silver'";
+                  $silver_query_data = mysqli_query($con,$silver_query);
+                  $silver_row = mysqli_fetch_array($silver_query_data);
+
+                  $gold_query = "SELECT * FROM `pricing_table` WHERE package_name = 'Glod'";
+                  $gold_query_data = mysqli_query($con,$gold_query);
+                  $gold_row = mysqli_fetch_array($gold_query_data);
+
+                  $Platinum_query = "SELECT * FROM `pricing_table` WHERE package_name = 'Platinum'";
+                  $Platinum_query_data = mysqli_query($con,$Platinum_query);
+                  $Platinum_row = mysqli_fetch_array($Platinum_query_data);
+                  ?>
+                    <!-- ------------package Section Start----------------------------------- -->
+
+                    <div id="package" class="tabcontent">
+                      <div class="container">
+                        <div class="row col-md-6 col-md-offset-3">
+                          <div class="panel panel-primary">
+                            <div class="panel-body">
+                              <div class="post_wraper">
+                                <form action="php/update_package.php">
+                                  <div class="pkg_wraper">
+                                    <div class="pkg_title">
+                                      <h2>Silver</h2>
+                                    </div>
+                                    <label for="days">Active Days</label>
+                                    <input  type="text" required name="silver_days" value="<?php echo $silver_row['N_o_days']; ?>" placeholder="Active Days">
+                                    <label for="">Number Of Gigs</label>
+                                    <input type="text" required value="<?php echo $silver_row['N_o_gigs']; ?>" name="silver_gig" placeholder="Enter Number">
+                                    <label for="">Number Of Post</label>
+                                    <input type="text" required value="<?php echo $silver_row['N_o_post']; ?>"  name="silver_post" placeholder="Number of Post">
+                                    <label for="">Price(tk)</label>
+                                    <input type="text" required value="<?php echo $silver_row['price']; ?>"  name="silver_price" placeholder="Price">
+                                  </div>
+                                  <div class="pkg_wraper">
+                                    <div class="pkg_title">
+                                      <h2>Gold</h2>
+                                    </div>
+                                    <label for="days">Active Days</label>
+                                    <input  type="text" value="<?php echo $gold_row['price']; ?>"  required name="gold_days" placeholder="Active Days">
+                                    <label for="">Number Of Gigs</label>
+                                    <input type="text" value="<?php echo $gold_row['price']; ?>" required name="gold_gig" placeholder="Enter Number">
+                                    <label for="">Number Of Post</label>
+                                    <input type="text" value="<?php echo $gold_row['price']; ?>" required name="gold_post" placeholder="Number of Post">
+                                    <label for="">Price(tk)</label>
+                                    <input type="text" value="<?php echo $gold_row['price']; ?>" required name="gold_price" placeholder="Price">
+                                  </div>
+                                  <div class="pkg_wraper">
+                                    <div class="pkg_title">
+                                      <h2>Platinum</h2>
+                                    </div>
+                                    <label for="days">Active Days</label>
+                                    <input  type="text" value="<?php echo $Platinum_row['price']; ?>" required name="Platinum_days" placeholder="Active Days">
+                                    <label for="">Number Of Gigs</label>
+                                    <input type="text" value="<?php echo $Platinum_row['price']; ?>" required name="Platinum_gig" placeholder="Enter Number">
+                                    <label for="">Number Of Post</label>
+                                    <input type="text" value="<?php echo $Platinum_row['price']; ?>" required name="Platinum_post" placeholder="Number of Post">
+                                    <label for="">Price(tk)</label>
+                                    <input type="text" value="<?php echo $Platinum_row['price']; ?>" required name="Platinum_price" placeholder="Price">
+                                  </div>
+                                  
+                                  <input type="submit" value="Update"
+                                  style="margin-left: 30px;"
+                                  >
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- -----------------------package Section Close------------------------------- -->
+
+                  <?php
+                  $approval_query = "SELECT * FROM `approve_user` ORDER BY ID ASC";
+                  $approval_query_data = mysqli_query($con,$approval_query);
+                  ?>
+                    <!-- -----Account Appruval Start------------- -->
+                    <div id="account_appruval" class="tabcontent">
+                        <div class="container">
+                            <div class="row col-md-6 col-md-offset-3">
+                            <div class="panel panel-primary">
+                                <div class="panel-body">
+                                <table id="customers">
+                                    <tr>
+                                    <th>User ID</th>
+                                    <th>Payment Method</th>
+                                    <th>Phone Number</th>
+                                    <th>Transaction ID</th>
+                                    <th>Package</th>
+                                    <th>Status</th>
+                                    </tr>
+                                    <?php
+                        while($approval_row = mysqli_fetch_array($approval_query_data)){ ?>
+                                    <tr>
+                                    <td>
+                                        <?php echo $approval_row['ID']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $approval_row['Payment_method']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $approval_row['phone_number']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $approval_row['Transaction_id']; ?>
+                                    </td>
+                                    <td >
+                                        <?php echo $approval_row['package']; ?>
+                                    </td>
+                                    <td  class="approve_btn">
+                                        <?php echo "
+                                        <a href='php/user_approve.php?user_id=$approval_row[ID]'>Approve</a>"
+                                        ?>
+                                        </td>
+                                    </tr>
+    
+                                    <?php } ?>
+                                </table>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- -----All Users Section Close----------------------------------------- -->
+
+                        <?php
+                        $admin_query = "SELECT * FROM `admin` WHERE email = '$admin_email'";
+                        $admin_query_data = mysqli_query($con,$admin_query);
+                        $admin_row = mysqli_fetch_array($admin_query_data);
+                        ?>
+                  <!-- ------------Profile Section Start----------------------------------- -->
+                  <div id="my_profile" class="tabcontent">
+                    <div class="container">
+                      <div class="row col-md-6 col-md-offset-3">
+                        <div class="panel panel-primary">
+                          <div class="panel-body">
+                            <div class="profile_wraper">
+                              <p>ID: <span><?php echo $admin_row['ID']; ?> </span></p>
+                              <p>Name: <span><?php echo $admin_row['name']; ?> </span></p>
+                              <p>Email: <span><?php echo $admin_row['email']; ?> </span></p>
+                              <p>Password: <span><?php echo $admin_row['password']; ?> </span><span></span></p>
+                              <div class="popup_button">
+                                <a href="" data-bs-toggle="modal" data-bs-target=""
+                                onclick="myFunction()" 
+                                  >Update</a
+                                >
+
+                                  <a class="Logout" href="php/admin_logout.php">Logout</a>
+
+                                
+                              </div>
+                              <div class="update_section" id="update_section">
+                                <form action="php/admin_update_profile.php">
+                                  <input type="text" required placeholder="Name" name="Admin_name" >
+                                  <input type="text" required placeholder="New password" name="Admin_password" >
+                                  <input   type="submit" value="Update">
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <script>
+                    function myFunction() {
+                    var x = document.getElementById("update_section");
+                    if (x.style.display === "block") {
+                      x.style.display = "none";
+                    } else {
+                      x.style.display = "block";
+                    }
+                    }
+                    </script>
+
+                  <!-- -----------------------Create Post Section Close------------------------------- -->
+                  <!-- admin wraper -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar & Hero End -->
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-primary text-light footer mt-48 pt-5 wow fadeIn mt-"
+        data-wow-delay="0.1s"
+        id="Footer"
+      >
+        <div class="container py-5 px-lg-5">
+          <div class="row g-5 justify-content-center align-items-center">
+            <div class="col-lg-4">
+              <h1 class="m-0" style="color: #fff">
+                <i class="fa fa-mail-bulk me-2"></i>CVitae
+              </h1>
+              <h5 class="text-white mb-3">Find Your Professional</h5>
+              <p>
+                <i class="fa fa-map-marker-alt me-3"></i> Rupnagar, Mirpur-2
+              </p>
+              <p><i class="fa fa-phone-alt me-3"></i>+8801879074212</p>
+              <p><i class="fa fa-envelope me-3"></i>rafiquljakir.com</p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <h5 class="text-white mb-4">Popular Link</h5>
+              <a class="btn btn-link" href="">About Us</a>
+              <a class="btn btn-link" href="">Contact Us</a>
+              <a class="btn btn-link" href="">Privacy Policy</a>
+              <a class="btn btn-link" href="">Terms & Condition</a>
+              <a class="btn btn-link" href="">Career</a>
+            </div>
+
+            <div class="col-lg-4">
+              <h5 class="text-white mb-4">Newsletter</h5>
+              <p>
+                Get latest News from our site and find the pure professional
+              </p>
+              <div class="position-relative w-100 mt-3">
+                <input
+                  class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
+                  type="text"
+                  placeholder="Your Email"
+                  style="height: 48px"
+                />
+                <button
+                  type="button"
+                  class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
+                >
+                  <i class="fa fa-paper-plane text-primary fs-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container px-lg-5">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-12 text-center mb-3 mb-md-0">
+                All Right Reserved. Designed By
+                <a class="footer-ourname" href="#">Team Infinity</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cvitae - Find you professional</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans"
+    />
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="css/all.min.css" />
+ 
+    <link rel="stylesheet"  href="css/style.css" />
+    <link rel="stylesheet" href="css/user_profile.css" />
+
+    <script
+      src="https://kit.fontawesome.com/a2803da249.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .profile_content {
+        float: left;
+        text-align: left;
+        margin-left: 20px;
+        display: block;
+        width: 540px;
+      }
+      .profile_content span {
+        color: rgb(36, 35, 35);
+        font-size: 30px;
+      }
+      .profile_content span span {
+        color: #6d6b6e;
+        font-size: 27px;
+      }
+      .popup_button {
+        display: block;
+        float: left;
+        width: 540px;
+        margin-top: 20%;
+        margin-left: -250px;
+        position: relative;
+      }
+      .popup_button a {
+        padding: 10px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #04aa6d;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        position: absolute;
+      }
+      .popup_button a:hover {
+        background-color: #3e8e41;
+      }
+      .popup_button a:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+      .Logout {
+        margin-left: 155px;
+        background-color: red !important;
+      }
+      .update_profile_content {
+        padding: 30px;
+        width: 800px;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 10px;
+        position: absolute;
+        left: 21%;
+      }
+      .left_side input,
+      .right_side input {
+        border: 1px solid rgb(88, 88, 88);
+        border-radius: 10px;
+        font-size: 15px;
+        width: 100%;
+        height: 40px;
+        padding-left: 7px;
+        transition: 0.1s;
+        outline: none;
+        background-color: #fff;
+        color: #000 !important;
+        opacity: 1;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      form input:last-child {
+        border: 1px solid rgb(88, 88, 88);
+        border-radius: 10px;
+        font-size: 15px;
+        width: 100%;
+        height: 40px;
+        padding-left: 7px;
+        transition: 0.1s;
+        outline: none;
+        background-color: #fff;
+    }
+      input[type="text"]:focus {
+        border: 1px solid rgb(56, 54, 54);
+        background-color: #fff;
+        box-shadow: 3px 3px 10px #888888;
+      }
+      input[type="text"]:hover{
+        background: rgb(218, 218, 218);
+      }
+      textarea {
+        border: 1px solid rgb(88, 88, 88);
+        border-radius: 10px;
+        font-size: 15px;
+        padding-left: 5px;
+        transition: 0.1s;
+        outline: none;
+      }
+      textarea:focus {
+        border: 1px solid rgb(56, 54, 54);
+        box-shadow: 3px 3px 10px #888888;
+      }
+      textarea:hover{
+        background: rgb(218, 218, 218);
+      }
+      .left_side label,
+      .right_side label {
+        font-size: 15px;
+        color: #000;
+      }
+      .left_side {
+        float: left;
+        width: 350px;
+        color: rgb(39, 37, 37);
+      }
+      .right_side {
+        float: right;
+        width: 350px;
+        color: #fff;
+      }
+      ::placeholder {
+        color: rgb(39, 37, 37);
+        opacity: 0.5;
+      }
+      .about_me {
+        border: 1px solid #999696;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-shadow: 5px 7px 10px #888888;
+      }
+      .area_title {
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: underline;
+      }
+      #submit_button{
+        margin-top: 50px;
+        font-size: 23px;
+        background-color: #721397;
+        color: #fff !important;
+        transition: 0.3s;
+        padding: 0px 0px !important;
+        height: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #submit_button:hover{
+        background-color: #580e75;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <?php
+    error_reporting(0);
+    $con = new mysqli("localhost","root","","cvitae");
+    $myfile = fopen("textfile/user_email.txt", "r") or die("Unable to open file!");
+    $user_email = fgets($myfile);
+    if($user_email == "Logout"){
+      exit(header( 'Location: http://localhost/CVitae/404.html'));
+      
+    }
+    ?>
+    <div class="container-xxl p-0" style="background-color: #721397 !important">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-grow text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar & Hero Start -->
+      <div class="container-xxl position-relative p-0">
+        <nav
+          class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+        >
+          <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0"><i class="fa fa-mail-bulk me-2"></i>CVitae</h1>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-exist-auto py-0">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="#" class="nav-item nav-link">Service</a>
+              <a href="post_page.html" class="nav-item nav-link">Post</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-xxl py-5 bg-primary email-exist-header mb-5">
+          <div class="container my-5 email-exist-pt px-lg-5">
+            <div class="row g-5 py-5">
+              <div class="col-12 text-center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar & Hero End -->
+      <?php
+      $user_details_query = "SELECT * FROM `user_registration` WHERE email = '$user_email'";
+      $user_details_data = mysqli_query($con,$user_details_query);
+      $user_details_row = mysqli_fetch_array($user_details_data);
+
+      $about_me_query = "SELECT * FROM `about_me` WHERE email = '$user_email'";
+      $about_me_data = mysqli_query($con,$about_me_query);
+      $about_me_row = mysqli_fetch_array($about_me_data);
+
+      $my_service_query = "SELECT * FROM `my_service` WHERE email = '$user_email'";
+      $my_service_data = mysqli_query($con,$my_service_query);
+      $my_service_row = mysqli_fetch_array($my_service_data);
+
+      $experence_query = "SELECT * FROM `experience` WHERE email = '$user_email'";
+      $experence_data = mysqli_query($con,$experence_query);
+      $experence_row = mysqli_fetch_array($experence_data);
+      
+      $education_query = "SELECT * FROM `education` WHERE  email = '$user_email'";
+      $education_data = mysqli_query($con,$education_query);
+      $education_row = mysqli_fetch_array($education_data);
+
+      $main_skill_query = "SELECT * FROM `main_skills` WHERE  email = '$user_email'";
+      $main_skill_data = mysqli_query($con,$main_skill_query);
+      $main_skill_row = mysqli_fetch_array($main_skill_data);
+
+      $others_skill_query = "SELECT * FROM `others_skills` WHERE  email = '$user_email'";
+      $others_skill_data = mysqli_query($con,$others_skill_query);
+      $others_skill_row = mysqli_fetch_array($others_skill_data);
+
+      $contact_query = "SELECT * FROM `contact` WHERE  email = '$user_email'";
+      $contact_data = mysqli_query($con,$contact_query);
+      $contact_row = mysqli_fetch_array($contact_data);
+
+      $social_media_query = "SELECT * FROM `social_media` WHERE  email = '$user_email'";
+      $social_media_data = mysqli_query($con,$social_media_query);
+      $social_media_row = mysqli_fetch_array($social_media_data);
+      ?>
+
+      <!-- ----------profile start--------------------- -->
+      <div class="container-xxl position-relative p-0">
+        <div class="page">
+          <header>
+            <nav id="user_nav">
+              <a href="#about" class="selected" id="getAbout">
+                <span class="fas fa-user"></span>
+                <span class="link">About</span>
+              </a>
+              <a href="#resume" id="getResume">
+                <span class="fas fa-file"></span>
+                <span class="link">Resume</span>
+              </a>
+              <a href="#contact" id="getContact">
+                <span class="fas fa-at"></span>
+                <span class="link">Contact</span>
+              </a>
+
+
+              <a href="#mygig" id="getmygig">
+                <span class="fas fa-briefcase"></span>
+                <span class="link">Gigs</span>
+              </a>
+              <a href="#mygig" id="getmygig">
+                <span class="fas fa-th-large"></span>
+                <span class="link">Gallary</span>
+              </a>
+
+              <a href="#myres" id="getmyres">
+                <span class="fas fa-user-alt"></span>
+                <span class="link">profile</span>
+              </a>
+
+            </nav>
+          </header>
+          <main>
+            <section id="presentation" class="profile">
+              <div class="profile-background"></div>
+              <div>
+                <div class="profile-image">
+                  <img
+                    src="img/user_profile.png"
+                    alt="User Profile Picture"
+                  />
+                </div>
+                <h1 class="profile-name" id="nombre" name="user_name">
+                  <?php echo $user_details_row['Full Name']; ?>
+                </h1>
+                <h2 class="profile-profession"><?php echo $user_details_row['profession']; ?></h2>
+                <div class="profile-social" id="profile-social">
+                  <a
+                    href="<?php echo $social_media_row['facebook']; ?>"
+                    class="fab fa-facebook-f fa-3x"  target="_blank"
+                  ></a>
+                  <a href="<?php echo $social_media_row['twitter']; ?>"  target="_blank" class="fab fa-twitter fa-3x"></a>
+                  <a href="<?php echo $social_media_row['github']; ?>"  target="_blank" class="fab fa-github fa-3x"></a>
+                </div>
+              </div>
+              <div class="profile-buttons">
+                <a href="/myCV.txt" download
+                  >DOWNLOAD CV <i class="fas fa-download"></i
+                ></a>
+              </div>
+            </section>
+            <section id="about" class="about view">
+              <article class="about-aboutMe">
+                <h3 class="title">About Me</h3>
+                <div class="line-left">
+                  <p>
+                    <?php echo $about_me_row['aboutme']; ?>
+                  </p>
+                  <div>
+                    <div><span>AGE . . . . </span><?php echo $about_me_row['Age']; ?></div>
+                    <div><span>RESIDENCE . . . . </span><?php echo $about_me_row['resendence']; ?></div>
+                    <div><span>FREELANCE . . . . </span><?php echo $about_me_row['freelance']; ?></div>
+                    <div><span>ADDRESS . . . . </span><?php echo $about_me_row['address']; ?></div>
+                  </div>
+                </div>
+              </article>
+              <article class="about-services">
+                <h3 class="title">My Services</h3>
+                <div class="line-left">
+                  <article class="line-down">
+                    <div class="fas fa-code"></div>
+                    <h4><?php echo $my_service_row['skill1']; ?></h4>
+                    <p>
+                      <?php echo $my_service_row['des1']; ?>
+                    </p>
+                  </article>
+                  <article class="line-down">
+                    <div class="fas fa-music"></div>
+                    <h4><?php echo $my_service_row['skill2']; ?></h4>
+                    <p>
+                      <?php echo $my_service_row['des2']; ?>
+                    </p>
+                  </article>
+                  <article>
+                    <div class="fas fa-bullhorn"></div>
+                    <h4><?php echo $my_service_row['skill3']; ?></h4>
+                    <p>
+                      <?php echo $my_service_row['des3']; ?>
+                    </p>
+                  </article>
+                  <article>
+                    <div class="fas fa-gamepad"></div>
+                    <h4><?php echo $my_service_row['skill4']; ?></h4>
+                    <p>
+                      <?php echo $my_service_row['des4']; ?>
+                    </p>
+                  </article>
+                </div>
+              </article>
+            </section>
+            <section id="resume" class="resume">
+              <h3 class="title">Resume</h3>
+              <article class="resume-lines">
+                <section class="resume-line line-left">
+                  <h4 class="line-down">
+                    <i class="fas fa-briefcase"></i> Experience
+                  </h4>
+                  <article class="line-down">
+                    <div class="date active"><?php echo $experence_row['year1']; ?></div>
+                    <h5 class="name"><?php echo $experence_row['designation1']; ?></h5>
+                    <h6 class="company"><?php echo $experence_row['company1']; ?>.</h6>
+                    <p>
+                      <?php echo $experence_row['description1']; ?>
+                    </p>
+                  </article>
+                  <article class="line-down">
+                    <div class="date"><?php echo $experence_row['year2']; ?></div>
+                    <h5 class="name"><?php echo $experence_row['designation2']; ?></h5>
+                    <h6 class="company"><?php echo $experence_row['company2']; ?>.</h6>
+                    <p>
+                      <?php echo $experence_row['description2']; ?>
+                    </p>
+                  </article>
+                  <article>
+                    <div class="date"><?php echo $experence_row['year3']; ?></div>
+                    <h5 class="name"><?php echo $experence_row['designation3']; ?></h5>
+                    <h6 class="company"><?php echo $experence_row['company3']; ?>.</h6>
+                    <p><?php echo $experence_row['description3']; ?>.</p>
+                  </article>
+                </section>
+
+                <section class="resume-line line-left">
+                  <h4 class="line-down">
+                    <i class="fas fa-university"></i> Education
+                  </h4>
+                  <article class="line-down">
+                    <div class="date"><?php echo $education_row['year1']; ?></div>
+                    <h5 class="name"><?php echo $education_row['institute1']; ?></h5>
+                    <h6 class="company"><?php echo $education_row['location1']; ?></h6>
+                    <p>
+                      <?php echo $education_row['description1']; ?>
+                    </p>
+                  </article>
+                  <article class="line-down">
+                    <div class="date"><?php echo $education_row['year2']; ?></div>
+                    <h5 class="name"><?php echo $education_row['institute2']; ?></h5>
+                    <h6 class="company"><?php echo $education_row['location2']; ?></h6>
+                    <p>
+                      <?php echo $education_row['description2']; ?>.
+                    </p>
+                  </article>
+                  <article>
+                    <div class="date"><?php echo $education_row['year3']; ?></div>
+                    <h5 class="name"><?php echo $education_row['institute3']; ?></h5>
+                    <h6 class="company"><?php echo $education_row['location3']; ?></h6>
+                    <p>
+                      <?php echo $education_row['description3']; ?>.
+                    </p>
+                  </article>
+                </section>
+              </article>
+
+              <article class="resume-skills">
+                <h3 class="title">My Skills</h3>
+                <div>
+                  <section class="line-left">
+                    <h4 class="line-down">
+                      <i class="fas fa-tv"></i> main Skills
+                    </h4>
+                    <div class="line-down">
+                      <div><?php echo $main_skill_row['skill1']; ?></div>
+                      <div>
+                        <div style="width: <?php echo $main_skill_row['percentage1']; ?>%"></div>
+                      </div>
+                    </div>
+                    <div class="line-down">
+                      <div><?php echo $main_skill_row['skill2']; ?></div>
+                      <div>
+                        <div style="width: <?php echo $main_skill_row['percentage2']; ?>%"></div>
+                      </div>
+                    </div>
+                    <div class="line-down">
+                      <div><?php echo $main_skill_row['skill3']; ?></div>
+                      <div>
+                        <div style="width: <?php echo $main_skill_row['percentage3']; ?>%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div><?php echo $main_skill_row['skill4']; ?></div>
+                      <div>
+                        <div style="width: <?php echo $main_skill_row['percentage4']; ?>%"></div>
+                      </div>
+                    </div>
+                  </section>
+
+ 
+                  <section class="line-left">
+                    <h4 class="line-down">
+                      <i class="fas fa-code"></i> Others
+                    </h4>
+                    <div class="line-down">
+                      <div><?php echo $others_skill_row['skill1']; ?></div>
+                      <div>
+                        <div style="width: <?php echo $others_skill_row['percentage1']; ?>%"></div>
+                      </div>
+                    </div>
+                    <div class="line-down">
+                      <div><?php echo $others_skill_row['skill2']; ?></div>
+                      <div>
+                        <div style="width: <?php echo $others_skill_row['percentage2']; ?>%"></div>
+                      </div>
+                    </div>
+                    <div class="line-down">
+                      <div><?php echo $others_skill_row['skill3']; ?></div>
+                      <div>
+                        <div style="width: <?php echo $others_skill_row['percentage3']; ?>%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div><?php echo $others_skill_row['skill4']; ?></div>
+                      <div>
+                        <div style="width: <?php echo $others_skill_row['percentage4']; ?>%"></div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </article>
+            </section>
+
+            <section id="contact" class="contact">
+              <h3 class="title">Get in Touch</h3>
+              <div class="contact-information line-left">
+                <div><span>ADDRESS . . . . </span> <?php echo $about_me_row['address']; ?></div>
+                <div><span>EMAIL . . . . </span> <?php echo $about_me_row['email']; ?></div>
+                <div><span>PHONE . . . . </span> <?php echo $contact_row['phone']; ?></div>
+                <div><span>FREELANCE . . . . </span> <?php echo $about_me_row['freelance']; ?></div>
+                <div class="googlemap" style="margin-top: 20px;">
+                  <?php echo $contact_row['ifram']; ?>
+                </div>
+              </div>
+            </section>
+
+            <section id="myres" class="myres">
+              <h3 class="title">My Profile</h3>
+              <div class="line-left" style="padding: 20px"></div>
+              <div class="profile_content">
+                <span>User ID: <span><?php echo $user_details_row['ID']; ?></span></span
+                ><br />
+                <span
+                  >Name:
+                  <span
+                    ><?php echo $user_details_row['Full Name']; ?></span
+                  ></span
+                ><br />
+                <span>Email: <span><?php echo $user_details_row['Email'];?></span></span
+                ><br />
+                <span>Password: <span><?php echo $user_details_row['Password']; ?></span></span
+                ><br />
+              </div>
+              <div class="popup_button">
+                <a href="" data-bs-toggle="modal" data-bs-target="#searchModal"
+                  >Update</a
+                >
+                <a class="Logout" href="php/logout.php">Logout</a>
+              </div>
+            </section>
+            <div class="modal fade" id="searchModal" tabindex="-1">
+              <div class="modal-dialog modal-fullscreen">
+                <div
+                  class="modal-content"
+                  style="background: rgba(29, 29, 39, 0.7)"
+                >
+                  <div class="modal-header border-0">
+                    <button
+                      type="button"
+                      class="btn bg-white btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body d-flex justify-content-center">
+                    <div class="input-group">
+                      <div class="update_profile_content">
+                        <form action="php/update.php" method="POST">
+                        <div class="left_side">
+                          <div class="about_me">
+                            <div class="area_title">Profile</div>
+                            <label for="Full_Name">Full Name</label>
+                            <input
+                              type="text"
+                              name="Full_Name"
+                              id="Full_Name"
+                              placeholder="Ex: jhone Doe"
+                              value="<?php echo $user_details_row['Full Name']; ?>"
+                              required
+                            />
+                            <label for="update_pass">Password</label>
+                            <input
+                              type="text"
+                              name="update_pass"
+                              id="update_pass"
+                              placeholder="Ex: a1b2n3g4\/5"
+                              value="<?php echo $user_details_row['Password']; ?>"
+                              required
+                            />
+                            <label for="Profession">Profession</label>
+                            <input
+                              type="text"
+                              name="Profession"
+                              id="Profession"
+                              placeholder="Available or Not Available"
+                              value="<?php echo $user_details_row['profession']; ?>"
+                              required
+                            />
+                          </div>
+                          <div class="about_me">
+                            <div class="area_title">About YourSelf</div>
+                            <label for="about_me">About You</label>
+                            <textarea
+                              id="about_me"
+                              name="about_me"
+                              rows="4"
+                              cols="50"
+                              placeholder="Describe About YourSelf"
+                              required
+                            ><?php echo $about_me_row['aboutme']; ?></textarea>
+                            <label for="Freelance">Freelance</label>
+                            <input
+                              type="text"
+                              name="Freelance"
+                              id="Freelance"
+                              placeholder="Available or Not Available"
+                              value="<?php echo $about_me_row['freelance']; ?>"
+                              required
+                            />
+                            <label for="Residence">Residence</label>
+                            <input
+                              type="text"
+                              id="Residence"
+                              required
+                              name="Residence"
+                              value="<?php echo $about_me_row['resendence']; ?>"
+                              placeholder="Ex: Bangladeshi"
+                            />
+                            <label for="Age">Age</label>
+                            <input
+                              type="text"
+                              name="Age"
+                              id="Age"
+                              required
+                              value="<?php echo $about_me_row['Age']; ?>"
+                              placeholder="Ex: 25"
+                            />
+                            <label for="PHONE">PHONE</label>
+                            <input
+                              type="text"
+                              name="PHONE"
+                              id="PHONE"
+                              value="<?php echo $contact_row['phone']; ?>"
+                              required
+                              placeholder="Ex: 01879074212"
+                            />
+                            <label for="Address">Address</label>
+                            <input
+                              type="text"
+                              name="Address"
+                              id="Address"
+                              value="<?php echo $about_me_row['address']; ?>"
+                              required
+                              placeholder="Ex: E-Block,R-8,Mirpur-1,Dhaka"
+                            />
+                          </div>
+
+                          <div class="about_me">
+                            <div class="area_title">Your Services</div>
+                            <label for="Service_1">Service One</label>
+                            <input
+                              type="text"
+                              name="Service_1"
+                              id="skService"
+                              required
+                              value="<?php echo $my_service_row['skill1']; ?>"
+                              placeholder="Name of Your Service"
+                            />
+                            <label for="description_1">description</label>
+                            <input
+                              type="text"
+                              name="description_1"
+                              id="description_1"
+                              required
+                              value="<?php echo $my_service_row['des1']; ?>"
+                              placeholder="Describe you Skills"
+                            />
+                            <label for="Service_2">Service Two</label>
+                            <input
+                              type="text"
+                              name="Service_2"
+                              id="Service_2"
+                              required
+                              value="<?php echo $my_service_row['skill2']; ?>"
+                              placeholder="Name of Your Service"
+                            />
+                            <label for="description_2">description</label>
+                            <input
+                              type="text"
+                              name="description_2"
+                              id="description_2"
+                              required
+                              value="<?php echo $my_service_row['des2']; ?>"
+                              placeholder="Describe you Skills"
+                            />
+                            <label for="Service_3">Service Three</label>
+                            <input
+                              type="text"
+                              name="Service_3"
+                              id="Service_3"
+                              required
+                              value="<?php echo $my_service_row['skill2']; ?>"
+                              placeholder="Name of Your Service"
+                            />
+                            <label for="description_3">description</label>
+                            <input
+                              type="text"
+                              name="description_3"
+                              id="description_3"
+                              required
+                              value="<?php echo $my_service_row['des3']; ?>"
+                              placeholder="Describe you Skills"
+                            />
+                            <label for="Service_4">Service Four</label>
+                            <input
+                              type="text"
+                              name="Service_4"
+                              id="Service_4"
+                              required
+                              value="<?php echo $my_service_row['skill4']; ?>"
+                              placeholder="Name of Your Service"
+                            />
+                            <label for="description_4">description</label>
+                            <input
+                              type="text"
+                              name="description_4"
+                              id="description_4"
+                              value="<?php echo $my_service_row['des4']; ?>"
+                              required
+                              placeholder="Describe you Skills"
+                            />
+                          </div>
+                          <!-- ------Education Start---------------- -->
+                          <div class="about_me">
+                            <div class="area_title">
+                              Education (Institute 1)
+                            </div>
+                            <label for="Edu_year_1">Year</label>
+                            <input
+                              type="text"
+                              name="Edu_year_1"
+                              id="Edu_year_1"
+                              required
+                              value="<?php echo $education_row['year1']; ?>"
+                              placeholder="Enter Year"
+                            />
+
+                            <label for="Edu_Degree_1">Degree</label>
+                            <input
+                              type="text"
+                              name="Edu_Degree_1"
+                              id="Edu_Degree_1"
+                              required
+                              value="<?php echo $education_row['institute1']; ?>"
+                              placeholder="Your Title"
+                            />
+                            <label for="Edu_Location_1">Location</label>
+                            <input
+                              type="text"
+                              name="Edu_Location_1"
+                              id="Edu_Location_1"
+                              required
+                              value="<?php echo $education_row['location1']; ?>"
+                              placeholder="Enter Location"
+                            />
+
+                            <label for="edu_description_1">Description</label>
+                            <input
+                              type="text"
+                              name="edu_description_1"
+                              id="edu_description_1"
+                              value="<?php echo $education_row['description1']; ?>"
+                              required
+                              placeholder="Describe you Degree"
+                            />
+                          </div>
+
+                          <div class="about_me">
+                            <div class="area_title">
+                              Education (Institute 2)
+                            </div>
+                            <label for="Edu_year_2">Year</label>
+                            <input
+                              type="text"
+                              name="Edu_year_2"
+                              id="Edu_year_2"
+                              value="<?php echo $education_row['year2']; ?>"
+                              required
+                              placeholder="Enter Year"
+                            />
+
+                            <label for="Edu_Degree_2">Degree</label>
+                            <input
+                              type="text"
+                              name="Edu_Degree_2"
+                              id="Edu_Degree_2"
+                              value="<?php echo $education_row['institute2']; ?>"
+                              required
+                              placeholder="Your Title"
+                            />
+                            <label for="Edu_Location_2">Location</label>
+                            <input
+                              type="text"
+                              name="Edu_Location_2"
+                              id="Edu_Location_2"
+                              value="<?php echo $education_row['location2']; ?>"
+                              required
+                              placeholder="Enter Location"
+                            />
+
+                            <label for="edu_description_2">Description</label>
+                            <input
+                              type="text"
+                              name="edu_description_2"
+                              value="<?php echo $education_row['description2']; ?>"
+                              id="edu_description_2"
+                              required
+                              placeholder="Describe you Degree"
+                            />
+                          </div>
+
+                          <div class="about_me">
+                            <div class="area_title">
+                              Education (Institute 3)
+                            </div>
+                            <label for="Edu_year_3">Year</label>
+                            <input
+                              type="text"
+                              name="Edu_year_3"
+                              value="<?php echo $education_row['year3']; ?>"
+                              id="Edu_year_3"
+                              required
+                              placeholder="Enter Year"
+                            />
+
+                            <label for="Edu_Degree_3">Degree</label>
+                            <input
+                              type="text"
+                              name="Edu_Degree_3"
+                              value="<?php echo $education_row['institute3']; ?>"
+                              id="Edu_Degree_3"
+                              required
+                              placeholder="Your Title"
+                            />
+                            <label for="Edu_Location_3">Location</label>
+                            <input
+                              type="text"
+                              name="Edu_Location_3"
+                              value="<?php echo $education_row['location3']; ?>"
+                              id="Edu_Location_3"
+                              required
+                              placeholder="Enter Location"
+                            />
+
+                            <label for="edu_description_3">Description</label>
+                            <input
+                              type="text"
+                              name="edu_description_3"
+                              value="<?php echo $education_row['description3']; ?>"
+                              id="edu_description_3"
+                              required
+                              placeholder="Describe you Degree"
+                            />
+                          </div>
+                          <div class="about_me">
+                            <div class="area_title">
+                              Map Location
+                            </div>
+                            <label for="map_ifram">ifram</label>
+                            <input
+                              type="text"
+                              name="map_ifram"
+                              id="map_ifram"
+                              placeholder="Ex: <iframe src='' frameborder='0'></iframe>"
+                            />
+                          </div>
+                          <div >
+                            <input id="submit_button"
+                            type="submit"
+                            value="Update"
+                            name="Update"
+                            required
+                          />
+                          </div>
+                        </div>
+                        <!-- ######################Right Side Start########################################### -->
+                        <div class="right_side">
+                          <div class="about_me">
+                            <div class="area_title">Experience 1(present)</div>
+                            <label for="Ex_year_1">Year</label>
+                            <input
+                              type="text"
+                              name="Ex_year_1"
+                              id="Ex_year_1"
+                              required
+                              value="<?php echo $experence_row['year1']; ?>"
+                              placeholder="Enter Year. Ex: 2016 - Present"
+                            />
+
+                            <label for="Ex_Designation_1">Designation</label>
+                            <input
+                              type="text"
+                              name="Ex_Designation_1"
+                              id="Ex_Designation_1"
+                              required
+                              value="<?php echo $experence_row['designation1']; ?>"
+                              placeholder="Your Title"
+                            />
+                            <label for="Ex_Company_1">Company</label>
+                            <input
+                              type="text"
+                              name="Ex_Company_1"
+                              id="Ex_Company_1"
+                              value="<?php echo $experence_row['company1']; ?>"
+                              required
+                              placeholder="Company Name"
+                            />
+
+                            <label for="ex_description_1">description</label>
+                            <input
+                              type="text"
+                              name="ex_description_1"
+                              id="ex_description_1"
+                              value="<?php echo $experence_row['description1']; ?>"
+                              required
+                              placeholder="Describe you work Experience"
+                            />
+                          </div>
+
+                          <div class="about_me">
+                            <div class="area_title">Experience 2</div>
+                            <label for="Ex_year_2">Year</label>
+                            <input
+                              type="text"
+                              name="Ex_year_2"
+                              value="<?php echo $experence_row['year2']; ?>"
+                              id="Ex_year_2"
+                              required
+                              placeholder="Enter Year. Ex: 2013 - 2016"
+                            />
+
+                            <label for="Ex_Designation_2">Designation</label>
+                            <input
+                              type="text"
+                              name="Ex_Designation_2"
+                              value="<?php echo $experence_row['designation2']; ?>"
+                              id="Ex_Designation_2"
+                              required
+                              placeholder="Your Title"
+                            />
+                            <label for="Ex_Company_2">Company</label>
+                            <input
+                              type="text"
+                              name="Ex_Company_2"
+                              value="<?php echo $experence_row['company2']; ?>"
+                              id="Ex_Company_2"
+                              required
+                              placeholder="Company Name"
+                            />
+
+                            <label for="ex_description_2">description</label>
+                            <input
+                              type="text"
+                              name="ex_description_2"
+                              value="<?php echo $experence_row['description2']; ?>"
+                              id="ex_description_2"
+                              required
+                              placeholder="Describe you work Experience"
+                            />
+                          </div>
+
+                          <div class="about_me">
+                            <div class="area_title">Experience 3</div>
+                            <label for="Ex_year_3">Year</label>
+                            <input
+                              type="text"
+                              name="Ex_year_3"
+                              id="Ex_year_3"
+                              value="<?php echo $experence_row['year3']; ?>"
+                              required
+                              placeholder="Enter Year. Ex: 2013 - 2016"
+                            />
+
+                            <label for="Ex_Designation_3">Designation</label>
+                            <input
+                              type="text"
+                              name="Ex_Designation_3"
+                              id="Ex_Designation_3"
+                              value="<?php echo $experence_row['designation3']; ?>"
+                              required
+                              placeholder="Your Title"
+                            />
+                            <label for="Ex_Company_3">Company</label>
+                            <input
+                              type="text"
+                              name="Ex_Company_3"
+                              id="Ex_Company_3"
+                              value="<?php echo $experence_row['company3']; ?>"
+                              required
+                              placeholder="Company Name"
+                            />
+
+                            <label for="ex_description_3">description</label>
+                            <input
+                              type="text"
+                              name="ex_description_3"
+                              value="<?php echo $experence_row['description3']; ?>"
+                              id="ex_description_3"
+                              required
+                              placeholder="Describe you work Experience"
+                            />
+                          </div>
+                          <div class="about_me">
+                            <div class="area_title">Main Skills</div>
+                              <label for="skill_1_title">Title (Skill 1)</label>
+                              <input
+                                type="text"
+                                name="skill_1_title"
+                                required
+                                id="skill_1_title"
+                                value="<?php echo $main_skill_row['skill1']; ?>"
+                                placeholder="Ex: Graphics Design, Web Design etc."
+                              />
+                              <label for="skill_1_percentage">Percentage</label>
+                              <input
+                                type="text"
+                                name="skill_1_percentage"
+                                id="skill_1_percentage"
+                                required
+                                value="<?php echo $main_skill_row['percentage1']; ?>"
+                                placeholder="Ex: 10. int's Indicate 10%"
+                              />
+                              <label for="skill_2_title">Title (Skill 2)</label>
+                              <input
+                                type="text"
+                                name="skill_2_title"
+                                id="skill_2_title"
+                                required
+                                value="<?php echo $main_skill_row['skill2']; ?>"
+                                placeholder="Ex: Graphics Design, Web Design etc."
+                              />
+                              <label for="skill_2_percentage">Percentage</label>
+                              <input
+                                type="text"
+                                name="skill_2_percentage"
+                                id="skill_2_percentage"
+                                value="<?php echo $main_skill_row['percentage2']; ?>"
+                                required
+                                placeholder="Ex: 10. int's Indicate 10%"
+                              />
+                              <label for="skill_3_title">Title (Skill 3)</label>
+                              <input
+                                type="text"
+                                name="skill_3_title"
+                                id="skill_3_title"
+                                required
+                                value="<?php echo $main_skill_row['skill3']; ?>"
+                                placeholder="Ex: Graphics Design, Web Design etc."
+                              />
+                              <label for="skill_3_percentage">Percentage</label>
+                              <input
+                                type="text"
+                                name="skill_3_percentage"
+                                id="skill_3_percentage"
+                                value="<?php echo $main_skill_row['percentage3']; ?>"
+                                required
+                                placeholder="Ex: 10. int's Indicate 10%"
+                              />
+                              <label for="skill_4_title">Title (Skill 4)</label>
+                              <input
+                                type="text"
+                                name="skill_4_title"
+                                id="skill_4_title"
+                                value="<?php echo $main_skill_row['skill4']; ?>"
+                                required
+                                placeholder="Ex: Graphics Design, Web Design etc."
+                              />
+                              <label for="skill_4_percentage">Percentage</label>
+                              <input
+                                type="text"
+                                name="skill_4_percentage"
+                                value="<?php echo $main_skill_row['percentage4']; ?>"
+                                id="skill_4_percentage"
+                                required
+                                placeholder="Ex: 10. int's Indicate 10%"
+                              />
+                        </div>
+                        <div class="about_me">
+                          <div class="area_title">Others Skills</div>
+                          <label for="O_skill_1_title">Title (Skill 1)</label>
+                          <input
+                            type="text"
+                            name="O_skill_1_title"
+                            id="O_skill_1_title"
+                            required
+                            value="<?php echo $others_skill_row['skill1']; ?>"
+                            placeholder="Ex: Wordpress, HTML , CSS etc."
+                          />
+                          <label for="O_skill_1_percentage">Percentage</label>
+                          <input
+                            type="text"
+                            name="O_skill_1_percentage"
+                            required
+                            value="<?php echo $others_skill_row['percentage1']; ?>"
+                            id="O_skill_1_percentage"
+                            placeholder="Ex: 25. int's Indicate 25%"
+                          />
+                          <label for="O_skill_2_title">Title (Skill 2)</label>
+                          <input
+                            type="text"
+                            name="O_skill_2_title"
+                            id="O_skill_2_title"
+                            value="<?php echo $others_skill_row['skill2']; ?>"
+                            required
+                            placeholder="Ex: Wordpress, HTML , CSS etc."
+                          />
+                          <label for="O_skill_2_percentage">Percentage</label>
+                          <input
+                            type="text"
+                            name="O_skill_2_percentage"
+                            required
+                            value="<?php echo $others_skill_row['percentage2']; ?>"
+                            id="O_skill_2_percentage"
+                            placeholder="Ex: 25. int's Indicate 25%"
+                          />
+                          <label for="O_skill_3_title">Title (Skill 3)</label>
+                          <input
+                            type="text"
+                            name="O_skill_3_title"
+                            required
+                            value="<?php echo $others_skill_row['skill3']; ?>"
+                            id="O_skill_3_title"
+                            placeholder="Ex: Wordpress, HTML , CSS etc."
+                          />
+                          <label for="O_skill_3_percentage">Percentage</label>
+                          <input
+                            type="text"
+                            name="O_skill_3_percentage"
+                            required
+                            value="<?php echo $others_skill_row['percentage3']; ?>"
+                            id="O_skill_3_percentage"
+                            placeholder="Ex: 25. int's Indicate 25%"
+                          />
+                          <label for="O_skill_4_title">Title (Skill 4)</label>
+                          <input
+                            type="text"
+                            name="O_skill_4_title"
+                            id="O_skill_4_title"
+                            required
+                            value="<?php echo $others_skill_row['skill4']; ?>"
+                            placeholder="Ex: Wordpress, HTML , CSS etc."
+                          />
+                          <label for="O_skill_4_percentage">Percentage</label>
+                          <input
+                            type="text"
+                            name="O_skill_4_percentage"
+                            id="O_skill_4_percentage"
+                            value="<?php echo $others_skill_row['percentage4']; ?>"
+                            required
+                            placeholder="Ex: 25. int's Indicate 25%"
+                          />
+                          </div>
+                          <div class="about_me">
+                            <div class="area_title">Social Media</div>
+                            <label for="facebook">FaceBook</label>
+                            <input
+                              type="text"
+                              name="facebook"
+                              id="facebook"
+                              placeholder="www.facebook.com/profile.php"
+                              value="<?php echo $social_media_row['facebook']; ?>"
+                              required
+                            />
+                            <label for="twitter">Twitter</label>
+                            <input
+                              type="text"
+                              name="twitter"
+                              id="twitter"
+                              placeholder="https://twitter.com"
+                              value="<?php echo $social_media_row['twitter']; ?>"
+                              required
+                            />
+                            <label for="github">GitHub</label>
+                            <input
+                              type="text"
+                              name="github"
+                              id="github"
+                              placeholder="https://github.com"
+                              value="<?php echo $social_media_row['github']; ?>"
+                              required
+                            />
+                          </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section id="mygig" class="mygig">
+              <h3 class="title">Get New Services</h3>
+              <div class="line-left">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  tenetur vel totam similique. Ullam consectetur reiciendis
+                  magni, eum laudantium natus qui ducimus tempore voluptates
+                  cumque numquam unde omnis vero? Animi!
+                </p>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+      <!-- ----------------Profile CLose------------------------------------------ -->
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-primary text-light footer mb-1000 pt-5 wow fadeIn mt-"
+        data-wow-delay="0.1s"
+        id="Footer"
+      >
+        <div class="container py-5 px-lg-5">
+          <div class="row g-5 justify-content-center align-items-center">
+            <div class="col-lg-4">
+              <h1 class="m-0" style="color: #fff">
+                <i class="fa fa-mail-bulk me-2"></i>CVitae
+              </h1>
+              <h5 class="text-white mb-3">Find Your Professional</h5>
+              <p>
+                <i class="fa fa-map-marker-alt me-3"></i> Rupnagar, Mirpur-2
+              </p>
+              <p><i class="fa fa-phone-alt me-3"></i>+8801879074212</p>
+              <p><i class="fa fa-envelope me-3"></i>rafiquljakir.com</p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <h5 class="text-white mb-4">Popular Link</h5>
+              <a class="btn btn-link" href="">About Us</a>
+              <a class="btn btn-link" href="">Contact Us</a>
+              <a class="btn btn-link" href="">Privacy Policy</a>
+              <a class="btn btn-link" href="">Terms & Condition</a>
+              <a class="btn btn-link" href="">Career</a>
+            </div>
+
+            <div class="col-lg-4">
+              <h5 class="text-white mb-4">Newsletter</h5>
+              <p>
+                Get latest News from our site and find the pure professional
+              </p>
+              <div class="position-relative w-100 mt-3">
+                <input
+                  class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
+                  type="text"
+                  placeholder="Your Email"
+                  style="height: 48px"
+                />
+                <button
+                  type="button"
+                  class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
+                >
+                  <i class="fa fa-paper-plane text-primary fs-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container px-lg-5">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-12 text-center mb-3 mb-md-0">
+                All Right Reserved. Designed By
+                <a class="footer-ourname" href="#">Team Infinity</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/user_profile.js"></script>
+  </body>
+</html>
