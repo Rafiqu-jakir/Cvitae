@@ -1,5 +1,5 @@
 # CVitae - Online CV Maker
-
+![Alt Text](CVitae.jpg)
 CVitae is an in-progress web application designed for creating professional CVs using a diverse selection of templates. Despite being under development, the platform already boasts an extensive array of functionalities. It is constructed using HTML, CSS, JavaScript, and jQuery for the frontend, while the backend relies on PHP. The project employs VS Code as the IDE and XAMPP as the server.
 
 
